@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar style="background-image: url('assets/img/logo.png');
+      background-size: cover"></div>
+      <h2>{{data.name}}</h2>
+    </mat-card-header>
+    <img mat-card-image src={{data.img}} alt="Photo of a Shiba Inu" style="height: 250px">
+    <mat-card-content>
+      <p>
+        {{data.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions style="text-align: center;">
+        <button mat-button (click)="onNoClick()">Cerrar</button>
+    </mat-card-actions>
+  </mat-card>

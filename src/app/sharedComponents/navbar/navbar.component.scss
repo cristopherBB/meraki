@@ -1,0 +1,13 @@
+.navbar{
+    .button{
+        color: white;
+    }
+    .mat-button:hover{
+            text-decoration: underline;
+    }
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    justify-content: flex-end;
+    width: 80%;
+}
