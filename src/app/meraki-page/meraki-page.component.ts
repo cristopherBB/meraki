@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, Inject } from '@angular/core';
+import { Component, OnInit, inject, Inject, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { firebaseService } from '../app.service';
 
@@ -29,6 +29,8 @@ export class seeProductDialog {
   styleUrls: ['./meraki-page.component.scss']
 })
 export class MerakiPageComponent implements OnInit {
+  @ViewChild("text") text: ElementRef | undefined;
+
   img!: string
   name!: string
   description!: string
@@ -54,3 +56,37 @@ export class MerakiPageComponent implements OnInit {
   }
 
 }
+
+function reveal() {
+  if(window.innerWidth > 700){
+    var scroll = window.pageYOffset;
+    var headerText = document.getElementById("text");
+    headerText!.style.transform = "translate(0px," + scroll/3 + "%)";
+
+    var aboutCard = document.getElementById("card");
+    aboutCard!.style.transform = "translate(0px," + (-scroll/4) + "%)";
+    animate(".products",125, "animate__fadeInRightBig")
+  }
+
+  if(window.innerHeight < 1000){
+    animate(".products",125, "animate__fadeIn")
+  }
+  animate(".gallery",150, "animate__fadeIn")
+  animate(".ubication",30, "animate__fadeInUp")
+  animate(".contact",30, "animate__fadeInLeft")
+
+}
+
+function animate(classType: string, visible: number, efect: string){
+  var reveals = document.querySelector(classType);
+  var windowHeight = window.innerHeight;
+  var elementTop = reveals!.getBoundingClientRect().top;
+  var elementVisible = visible;
+  if (elementTop < windowHeight - elementVisible) {
+    reveals!.classList.add("animate__animated", efect);
+  } else {
+    reveals!.classList.remove("animate__animated", efect);
+  }
+}
+
+window.addEventListener("scroll", reveal);

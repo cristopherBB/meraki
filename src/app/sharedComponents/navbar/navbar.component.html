@@ -1,6 +1,27 @@
-<div class="navbar animate__animated animate__fadeInDown">
-    <button mat-button class="button" (click)= "about()">Acerca de</button>
-    <button mat-button class="button" (click)= "products()">¿Qué vendemos?</button>
-    <button mat-button class="button" (click)= "gallery()">Galeria</button>
-    <button mat-button class="button" (click)= "ubication()">Ubicación/contacto</button>
+<div class="navbar animate__animated animate__fadeInRight">
+    <mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+        <div class="side">
+            <button mat-button (click)="close('toggle button')">
+                <mat-icon style="font-size: xx-large;">keyboard_backspace</mat-icon>
+            </button>
+            <button mat-button class="button" (click)= "about()">Acerca de</button>
+            <button mat-button class="button" (click)= "products()">¿Qué vendemos?</button>
+            <button mat-button class="button" (click)= "gallery()">Galeria</button>
+            <button mat-button class="button" (click)= "ubication()">Ubicación/contacto</button>
+        </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content style="background: transparent;">
+            <button mat-button (click)="sidenav.open()">
+                <mat-icon style="color: white; font-size: xx-large;">list</mat-icon>
+            </button>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <div class="buttons">
+        <button mat-button class="button" (click)= "about()">Acerca de</button>
+        <button mat-button class="button" (click)= "products()">¿Qué vendemos?</button>
+        <button mat-button class="button" (click)= "gallery()">Galeria</button>
+        <button mat-button class="button" (click)= "ubication()">Ubicación/contacto</button>
+    </div>
 </div>

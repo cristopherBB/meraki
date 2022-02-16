@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="header">
-    <div class="headerBox">
+    <div class="headerBox" id="text">
         <img class="logo  animate__animated animate__fadeInLeft" src="assets/img/logo.png" alt="Logo de la pagina">
         <div class="text  animate__animated animate__fadeInLeft">
             <h2 class="name">Meraki</h2>
@@ -10,16 +10,16 @@
     <div class="filter"></div>
 </div>
 <img class="aboutImg  animate__animated animate__fadeInUp" src="assets/img/about3.jpg" alt="Sobre mi">
-<mat-card  class = "card-about" > 
+<mat-card  class = "card-about" id="card"> 
   <mat-card-title> Acerca de </mat-card-title> 
   <mat-card-content> 
     <br> 
     <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nesciunt nulla quibusdam accusamus, totam iste repudiandae eveniet sed vero, praesentium eligendi provident et delectus voluptatem tempore dolorum modi soluta laboriosam! </p> 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae et autem accusamus pariatur laboriosam neque magni illo nostrum voluptatibus? Eos obcaecati labore consequuntur nemo facilis expedita nostrum, impedit maiores.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae et </p>
   </mat-card-content> 
 </mat-card>
 
-<div class="products">
+<div class="products" id="product">
     <p>¡Conoce nuestros deliciosos productos!</p>
     <div class="productList">
       <article>
@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<div class="gallery">
+<div class="gallery" id="worksGallery">
   <img class="works" src="assets/img/galeria-1.jpg" alt="Trabajos" (click) = "modalImage(0)">
   <img class="works" src="assets/img/galeria-2.jpg" alt="Trabajos" (click) = "modalImage(1)">
   <img class="works" src="assets/img/galeria-3.jpg" alt="Trabajos" (click) = "modalImage(2)">
@@ -85,7 +85,7 @@
   <img class="works" src="assets/img/galeria-8.jpg" alt="Trabajos" (click) = "modalImage(7)">
 </div>
 
-<div class="ubication">
+<div class="ubication" id="ubicationID">
   <p>Ubicación</p>
   <div class="information">
     <p>Los Dos Caminos , Miranda</p>

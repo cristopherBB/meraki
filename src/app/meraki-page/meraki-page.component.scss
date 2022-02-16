@@ -6,10 +6,21 @@
     background-size: 100% 455px;
     display: flex;
     align-items: center;
+    @media (max-width: 700px){
+        width: 100%;
+        justify-content: center;
+    }
+    @media(max-width: 560px){
+        background-size: auto;
+    }
     .headerBox{
         display: flex;
         position: absolute;
         margin-left: 20%;
+        z-index: 1;
+        @media(max-width: 700px){
+            margin-left: 0;
+        }
     }
     .filter{
         background-color: black;
@@ -32,11 +43,17 @@
         color: white;
         margin: 0 0 14px;
         font-size: xxx-large;
+        @media(max-width: 300px){
+            font-size: xx-large;
+        }
     }
     .sentence{
         color: white;
         font-size: x-large;
         font-style: italic;
+        @media(max-width: 300px){
+            font-size: large;
+        }  
     }
 }
 
@@ -49,29 +66,65 @@
     position: relative;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    @media (max-width: 900px){
+        object-fit: cover;
+    }
+    @media (max-width: 700px){
+        width: 70%;
+        margin-left: 14%;
+    }
 }
 
 .card-about{
-    width: 26%;
+    position: relative;
+    width: 21%;
     margin-left: 54%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 1;
+   @media (max-width: 700px){
+        width: 61%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .products{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    margin-top: -200px;
+    @media (max-width: 700px){
+        margin-top: 80px;
+    }
     p{
         font-size: x-large;
+    }
+    @media (max-width: 440px){
+        p{
+            font-size: large;
+        }
+    }
+    @media (max-width: 340px){
+        p{
+            font-size: inherit;
+        }
     }
     .productList{
         width: 56%;
         border: 7px double;
         margin-top: 29px;
         display: flex;
+        @media (max-width: 700px){
+            flex-direction: column;
+            align-items: center;
+        }
         article{
             width: 50%;
             padding: 26px;
+            @media (max-width: 700px){
+                width: initial;
+            }
             h2{
                 text-align: center;
                 margin: 0;
@@ -100,6 +153,7 @@
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
+    opacity: 0;
     .works{
         width: 25%;
         height: 250px;
@@ -108,12 +162,16 @@
             filter: contrast(130%);
             cursor: pointer;
         }
+        @media (max-width: 600px){
+            width: 50%;
+        }
     }
 }
 
 .ubication{
     text-align: center;
     margin-top: 100px;
+    opacity: 0;
     p{
         font-size: x-large;
     }
@@ -125,12 +183,19 @@
         }
         justify-content: space-evenly;
         align-items: center;
+        @media (max-width: 440px){
+            flex-direction: column;
+            div{
+                margin-top: 30px;
+            }
+        }
     }
 }
 
 .contact{
     text-align: center;
     margin-top: 50px;
+    opacity: 0;
     p{
         font-size: x-large;
     }
@@ -140,6 +205,9 @@
         display: inline-flex;
         justify-content: space-around;
         margin-bottom: 55px;
+        @media (max-width: 900px){
+            flex-direction: column;
+        }
         .element{
             display: flex;
             align-items: center;

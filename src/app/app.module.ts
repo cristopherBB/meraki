@@ -13,9 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {GoogleMapsModule} from '@angular/google-maps';
 import {MatDialogModule} from '@angular/material/dialog';
-//import { AngularFireDatabaseModule} from 'angularfire2/database';
-//import { AngularFireModule } from 'angularfire2';
+import {MatIconModule} from '@angular/material/icon';
 import { environment } from '../environments/environment';
+//import {MatSidenav} from '@angular/material/sidenav';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -33,8 +34,9 @@ import { environment } from '../environments/environment';
     MatCardModule,
     GoogleMapsModule,
     MatDialogModule,
-    //AngularFireDatabaseModule,
-    //AngularFireModule.initializeApp(environment.firebase)
+    MatIconModule,
+    //MatSidenav,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
