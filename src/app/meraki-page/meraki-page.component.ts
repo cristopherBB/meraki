@@ -69,7 +69,7 @@ function reveal() {
   }
 
   if(window.innerHeight < 1000){
-    animate(".products",125, "animate__fadeIn")
+    animate(".products",125, "animate__fadeInLeft")
   }
   animate(".gallery",150, "animate__fadeIn")
   animate(".ubication",30, "animate__fadeInUp")
