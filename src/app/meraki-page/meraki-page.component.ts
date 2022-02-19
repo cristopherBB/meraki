@@ -58,7 +58,7 @@ export class MerakiPageComponent implements OnInit {
 }
 
 function reveal() {
-  if(window.innerWidth > 700){
+  if(window.innerWidth > 1000){
     var scroll = window.pageYOffset;
     var headerText = document.getElementById("text");
     headerText!.style.transform = "translate(0px," + scroll/3 + "%)";
